@@ -1,6 +1,6 @@
 # AR parameters such as FFT parameters.
 audio_repr: ar_msn.AR_MSN
-weight_file: /net/tscratch/people/plghpiotr/MSN-audio/byol-a/audio-11-01-2024/l1wa5eof/checkpoints/model-epoch=470-train_loss=5.49.ckpt
+weight_file: /Users/piotr/Documents/studia/mgr/MIR/msn-audio/msn-audio/model-epoch=470-train_loss=5.49.ckpt
 feature_d: 3072
 sample_rate: 16000
 n_fft: 1024
@@ -28,7 +28,6 @@ ft_epochs: 200
 ft_freq_mask: 30
 ft_time_mask: 100
 ft_rrc: True
-
 
 # Unit duration in seconds for one audio segment.
 unit_sec: 0.95
