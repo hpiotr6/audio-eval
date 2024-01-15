@@ -48,9 +48,13 @@ class AR_MSN(BaseAudioRepr):
         return x
 
     def pad(self, x):
-        desired_size = (64, 576)
+        if x.size(-1) <= 576:
+            desired_size = (64, 576)
+        elif x.size(-1) == 3001:
+            desired_size = (64, 3136)
+        else:
+            raise ValueError()
         assert x.size(-2) <= desired_size[0]
-        assert x.size(-1) <= desired_size[1]
 
         # Calculate the amount of padding needed for each dimension
         pad_dim2 = max(0, desired_size[0] - x.size(-2))
